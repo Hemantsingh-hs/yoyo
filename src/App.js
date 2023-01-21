@@ -43,7 +43,7 @@ function App() {
     
     
     <Router>
-      <Navbar title="YOYO" mode={mode} toggleMode={toggleMode}></Navbar>
+      <Navbar title="TOTO" mode={mode} toggleMode={toggleMode}></Navbar>
 
       <Alert alert={alert} />
 
@@ -52,12 +52,13 @@ function App() {
     
 
         <Routes>
-          <Route exact path="/about" element={<About/>}/> 
-            {/* <About /> */}
+
+          <Route  exact path="/" element={<TextForm heading='Word Counter - Character Counter - Remove Extra Spaces' mode={mode} showAlert={showAlert} />}/>
+            {/* <TextForm heading='Enter The Text' mode={mode} showAlert={showAlert} /> */}
          
     
-          <Route  exact path="/" element={<TextForm heading='Enter The Text' mode={mode} showAlert={showAlert} />}/>
-            {/* <TextForm heading='Enter The Text' mode={mode} showAlert={showAlert} /> */}
+          <Route exact path="/about" element={<About mode={mode}/>}/> 
+            {/* <About /> */}
            
           
         </Routes> 
